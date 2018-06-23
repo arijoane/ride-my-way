@@ -7,7 +7,7 @@ rides = { }
 def get_rides():
     pass
 
-@app.route("/api/v1/rides/get>",method=['GET'])
+@app.route("/api/v1/rides/get>",methods=['GET'])
 def get_single_ride():
     pass
 
