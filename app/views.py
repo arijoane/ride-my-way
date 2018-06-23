@@ -1,5 +1,5 @@
 from app import app
-from app.model import RideOffer, Users
+from app.model import RideOffer, Passenger, Driver
 from flask import request, Flask, json, jsonify
 
 rides = { }
