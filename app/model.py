@@ -1,4 +1,6 @@
-"""a class representing the user model"""
+
+
+"""a class representing the Passenger model"""
 class Passenger:
     def __init__(self,name,username,email,contact,country,password,confirm_password):
         self.name = name
@@ -9,9 +11,11 @@ class Passenger:
         self.password = password
         self.confirm_password = confirm_password
 
+    
+
 class Driver:
     """A class representing the Driver Model"""
-    def __init__(self, name,username,email,contact,country,password,confirm_password,licence_number,number_plate):
+    def __init__(self, name,username,email,contact,country,password,confirm_password,licence_number,number_plate):      
         self.name = name
         self.username = username
         self.email = email
@@ -22,8 +26,12 @@ class Driver:
         self.licence_number = licence_number
         self.number_plate = number_plate
 
+    
+
+        
+
 class RideOffer:
-    """A class representing the Ride_offermodel"""
+    """A class representing the Ride_offer model"""
     def __init__(self,driver,cartype,number_plate,destination,fare,mobile,pick):
         self.driver = driver 
         self.cartype = cartype
@@ -32,10 +40,7 @@ class RideOffer:
         self.destination = destination
         self.fare = fare 
         self.pick = pick
-        
-        
 
-
-
+    
 
 
