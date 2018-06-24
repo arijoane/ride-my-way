@@ -47,8 +47,8 @@ class RideOffer:
         self.destination = destination
         self.fare = fare 
         self.pick = pick
-        self.id = self.counter
-        self.counter +=1
+        self.id = RideOffer.counter
+        RideOffer.counter +=1
 
     
 

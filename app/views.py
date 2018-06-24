@@ -35,8 +35,14 @@ def create_offer():
     
 
 @app.route("/api/v1/rides/<int:ride_id>",methods=['GET'])
-def get_single_ride():
-    pass
+def get_single_ride(ride_id):
+    if request.method  == 'GET':
+        for item in ride_offer_list:
+            if item['id'] == ride_id:
+                return jsonify({'ride':item})
+                
+        return jsonify({'error':'ride not found'})
+    
 
 
 
