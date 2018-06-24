@@ -15,7 +15,7 @@ def drivers():
         params = request.get_json()
         driver = Driver(params['name'],params['username'],params['email'],params['contact'],params['country'],params['password'],params['confirm_password'],params['licence_number'],params['number_plate'])
         driver_list.append(driver.__dict__)
-        return jsonify({'driver':driver})
+        return jsonify({'driver':driver.__dict__})
 
 
 @app.route("/api/v1/rides", methods=['GET'])
@@ -30,7 +30,7 @@ def create_offer():
         box = request.get_json()
         offer = RideOffer(box['driver'], box['cartype'],box['number_plate'],box['destination'],box['fare'],box['mobile'],box['pick'])
         ride_offer_list.append(offer.__dict__)
-        return jsonify({'ride_offer':offer})
+        return jsonify({'ride_offer':offer.__dict__})
 
     
 
