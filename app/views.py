@@ -31,6 +31,7 @@ def create_offer():
         offer = RideOffer(box['driver'], box['cartype'],box['number_plate'],box['destination'],box['fare'],box['mobile'],box['pick'])
         ride_offer_list.append(offer.__dict__)
         return jsonify({'ride_offer':offer.__dict__})
+        return jsonify({"message":"successfully created"})
 
     
 

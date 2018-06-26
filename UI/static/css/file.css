@@ -15,14 +15,15 @@ form{
 }
 h1,h2,h3,p{
     text-align: center;
+    color:blue;
 }
 table,th,td{
     border:1px solid burlywood;
     text-align: center;
-    background-color: peru
+    background-color: gray
 }
 .topnav {
-    background-color: crimson;
+    background-color: black;
     overflow: hidden;
 }
 
