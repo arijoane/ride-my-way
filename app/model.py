@@ -50,6 +50,15 @@ class RideOffer:
         self.id = RideOffer.counter
         RideOffer.counter +=1
 
+class request:
+    """A class representing the requests model"""
+    counter =1
+    def __init__(self,PName,contact,place):
+        self.PName = PName
+        self.contact = contact
+        self.place = place
+        self.id = request.counter
+        request.counter +=1
     
 
 

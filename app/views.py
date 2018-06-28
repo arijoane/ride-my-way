@@ -16,9 +16,19 @@ def drivers():
         driver = Driver(params['name'],params['username'],params['email'],params['contact'],params['country'],params['password'],params['confirm_password'],params['licence_number'],params['number_plate'])
         driver_list.append(driver.__dict__)
         return jsonify({'driver':driver.__dict__})
+        
+@app.route("/api/v1/passengers",methods=['GET','POST'])
+def passengers():
+    if request.method == 'GET':
+        return jsonify({'passengers': passenger_list})
 
+    if request.method == 'POST':
+        params  = request.get_json()
+        passenger = Passenger(params['name'],params['username'],params['email'],params['contact'],params['country'],params['password'],params['confirm_password'])
+        passenger_list.append(passenger.__dict__)
+        return jsonify({'passenger':passenger.__dict__})
 
-@app.route("/api/v1/rides", methods=['GET'])
+@app.route("/api/v1/ride", methods=['GET'])
 
 def ride_offer():
     if request.method == 'GET':
@@ -47,9 +57,4 @@ def get_single_ride(ride_id):
 
 
 
-
-
-@app.route("/api/v1/rides/<int:ride_id>/requests", methods=['POST'])
-def join_ride():
-    pass
-
+    
