@@ -1,0 +1,66 @@
+body{
+    background-color:brown;
+    background-image: url(../image/golf.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100%;
+    background-size: cover;
+    align-content: center;
+    text-align: center;
+    
+}
+form{
+    display: inline-block;
+
+}
+h1,h2,h3,p{
+    text-align: center;
+    color:blue;
+}
+table,th,td{
+    border:1px solid burlywood;
+    text-align: center;
+    background-color: gray
+}
+.topnav {
+    background-color: black;
+    overflow: hidden;
+}
+
+.topnav a {
+    float: left;
+    color: wheat;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.topnav a:hover {
+    background-color: cadetblue;
+    color: black;
+}
+
+.topnav a.active {
+    background-color: cadetblue;
+    color: white;
+}
+select,input[type=text],input[type=text],input[type=text],input[type=text],input[type=text],input[type=password],input[type=password]{
+margin: 6px 0;
+padding: 6px 6px;
+display: inline-block;
+}
+
+a:link, a:visited {
+    background-color: #944dff;
+    color: white;
+    padding: 14px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
+
+a:hover, a:active {
+    background-color: #ff80df;
+}
