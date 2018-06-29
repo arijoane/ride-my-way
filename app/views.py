@@ -28,20 +28,22 @@ def passengers():
         passenger_list.append(passenger.__dict__)
         return jsonify({'passenger':passenger.__dict__})
 
-@app.route("/api/v1/ride", methods=['GET'])
+@app.route("/api/v1/all_rides", methods=['GET'])
 
 def ride_offer():
     if request.method == 'GET':
-        return jsonify({'ride_offer':ride_offer_list})
+        return jsonify({'ride_offer':ride_offer_list,'message':'successfully fetched all offers'})
+        
 
-@app.route("/api/v1/rides", methods=['POST'])
+@app.route("/api/v1/add_ride", methods=['POST'])
 def create_offer():
     if request.method == 'POST':
         box = request.get_json()
         offer = RideOffer(box['driver'], box['cartype'],box['number_plate'],box['destination'],box['fare'],box['mobile'],box['pick'])
         ride_offer_list.append(offer.__dict__)
-        return jsonify({'ride_offer':offer.__dict__})
-        return jsonify({"message":"successfully created"})
+        #return jsonify({'ride_offer':offer.__dict__})
+
+        return jsonify ({'message':'successfully created','ride_offer':offer.__dict__}), 201
 
     
 
@@ -55,6 +57,6 @@ def get_single_ride(ride_id):
         return jsonify({'error':'ride not found'})
     
 
-
+@app.route("/api/v1/")
 
     

@@ -15,5 +15,8 @@ class TestRidemyway(unittest.TestCase):
         self.assertEqual(offer.number_plate,"UBA")
         self.assertEqual(offer.mobile,"0700000")
         self.assertEqual(offer.destination,"kololo")
-        self.assertEqual(offer.fare,"2000")
+        self.assertEqual(offer.fare,'2000')
         self.assertEqual(offer.pick,"Ntinda")
+
+#def test_it_lists_all_ride_Offers(self):
+       # """test that shows all ride offers"""
